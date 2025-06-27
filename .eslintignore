@@ -1,0 +1,12 @@
+# Arquivos de teste
+src/test/
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Outros arquivos a ignorar
+node_modules/
+.next/
+dist/
+build/ 
