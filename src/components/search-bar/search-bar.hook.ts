@@ -6,27 +6,34 @@ export function useSearchLogic() {
   const [showResults, setShowResults] = React.useState(false);
 
   const { data: searchData, isLoading } = useSearchCoins(query);
-  const results = searchData?.coins?.slice(0, 10) || [];
+  
+  const results = React.useMemo(
+    () => searchData?.coins?.slice(0, 10) || [],
+    [searchData]
+  );
 
-  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const value = e.target.value;
-    setShowResults(true);
-    setQuery(value);
-  }
+  const handleInputChange = React.useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
+      setShowResults(true);
+      setQuery(value);
+    },
+    []
+  );
 
-  const handleResultClick = () => {
+  const handleResultClick = React.useCallback(() => {
     setShowResults(false);
     setQuery('');
-  };
+  }, []);
 
-  const clearSearch = () => {
+  const clearSearch = React.useCallback(() => {
     setQuery('');
     setShowResults(false);
-  };
+  }, []);
 
-  const handleFocus = () => {
+  const handleFocus = React.useCallback(() => {
     setShowResults(true);
-  };
+  }, []);
 
   return React.useMemo(
     () => ({

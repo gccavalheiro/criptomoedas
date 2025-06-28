@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -9,10 +9,10 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 
 export const useTheme = () => {
-  const context = useContext(ThemeContext);
+  const context = React.useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
@@ -29,7 +29,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
   const [theme, setTheme] = React.useState<Theme>('light');
   const [mounted, setMounted] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setMounted(true);
 
     const savedTheme = localStorage.getItem('theme') as Theme;
@@ -44,7 +44,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!mounted) return;
 
     const root = document.documentElement;
