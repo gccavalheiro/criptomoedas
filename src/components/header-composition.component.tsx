@@ -70,7 +70,7 @@ function HeaderActions(props: HeaderActionsProps) {
   return <div className={cn('flex items-center gap-4', className)} {...rest} />;
 }
 
-export const Header = {
+export const HeaderComposition = {
   Root: HeaderRoot,
   Content: HeaderContent,
   ContentInner: HeaderContentInner,

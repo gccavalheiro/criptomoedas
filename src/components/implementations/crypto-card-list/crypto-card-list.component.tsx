@@ -1,6 +1,6 @@
 'use client';
 import { ErrorMessage } from '@/components/error-message.component';
-import { CryptoCardItem } from '@/components/implementations/crypto-card-item';
+import { CryptoCardItem } from '@/components/implementations/crypto-card-item/crypto-card-item.component';
 import { LoadingSpinner } from '@/components/loading-spinner.component';
 import { useTopCoins } from '@/services/api';
 import { CryptoCurrency } from '@/types/crypto';

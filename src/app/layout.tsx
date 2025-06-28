@@ -1,8 +1,8 @@
-import { Providers } from '@/components/implementations/providers';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { HeaderImplementation } from '@/components/implementations/header-implementation/header-implementation.component';
+import { Providers } from '@/components/implementations/providers/providers.component';
 import './globals.css';
-import { HeaderImplementation } from '../components/implementations/header';
 
 const poppins = Poppins({
   variable: '--font-poppins',
