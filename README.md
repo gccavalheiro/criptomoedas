@@ -1,6 +1,7 @@
 # Crypto Tracker
 
 Aplicação para acompanhar criptomoedas em tempo real, construída com Next.js 15, TypeScript e Tailwind CSS.
+[Visualizar Demo](https://criptomoedas-xi.vercel.app)
 
 ## 🚀 Tecnologias
 
