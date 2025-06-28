@@ -1,7 +1,6 @@
-import { Header as HeaderComponent } from '@/components/header';
 import { SearchBar } from '@/components/search-bar/search-bar';
-
 import Link from 'next/link';
+import { Header as HeaderComponent } from '../../header';
 import { ThemeSelector } from '../theme-selector';
 
 export function Header() {
