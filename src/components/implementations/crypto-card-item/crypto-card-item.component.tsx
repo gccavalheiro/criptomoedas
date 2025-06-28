@@ -1,4 +1,4 @@
-import { CryptoCard } from '@/components/crypto-card';
+import { CryptoCard } from '@/components/crypto-card.component';
 import { CryptoCurrency } from '@/types/crypto';
 import {
   formatCurrency,

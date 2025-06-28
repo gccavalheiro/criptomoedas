@@ -1,24 +1,25 @@
-import { SearchBar } from '@/components/search-bar/search-bar';
 import Link from 'next/link';
-import { Header as HeaderComponent } from '../../header';
-import { ThemeSelector } from '../theme-selector';
 
-export function Header() {
+import { ThemeSelector } from '../theme-selector';
+import { SearchBar } from '@/components/search-bar/search-bar.component';
+import { Header } from '@/components/header.component';
+
+export function HeaderImplementation() {
   return (
-    <HeaderComponent.Root>
-      <HeaderComponent.Content>
-        <HeaderComponent.ContentInner>
-          <HeaderComponent.Navigation>
+    <Header.Root>
+      <Header.Content>
+        <Header.ContentInner>
+          <Header.Navigation>
             <Link href="/">
-              <HeaderComponent.Logo>Crypto Tracker</HeaderComponent.Logo>
+              <Header.Logo>Crypto Tracker</Header.Logo>
             </Link>
             <SearchBar />
-          </HeaderComponent.Navigation>
-          <HeaderComponent.Actions>
+          </Header.Navigation>
+          <Header.Actions>
             <ThemeSelector />
-          </HeaderComponent.Actions>
-        </HeaderComponent.ContentInner>
-      </HeaderComponent.Content>
-    </HeaderComponent.Root>
+          </Header.Actions>
+        </Header.ContentInner>
+      </Header.Content>
+    </Header.Root>
   );
 }

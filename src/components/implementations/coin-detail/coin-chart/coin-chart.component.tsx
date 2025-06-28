@@ -1,8 +1,8 @@
 'use client';
 
-import { ErrorMessage } from '@/components/error-message';
-import { LoadingSpinner } from '@/components/loading-spinner';
-import { PriceChartRoot } from '@/components/price-chart';
+import { ErrorMessage } from '@/components/error-message.component';
+import { LoadingSpinner } from '@/components/loading-spinner.component';
+import { PriceChartRoot } from '@/components/price-chart.component';
 import { useMarketChart } from '@/services/api';
 
 interface CoinChartProps {

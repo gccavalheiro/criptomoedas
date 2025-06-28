@@ -3,8 +3,8 @@ import { CoinHeader } from '../coin-header/coin-header.component';
 import { CoinStats } from '../coin-stats/coin-stats.component';
 import { CoinHighLow } from '../coin-high-low/coin-high-low.component';
 import { CryptoCurrency } from '@/types/crypto';
-import { ErrorMessage } from '@/components/error-message';
-import { LoadingSpinner } from '@/components/loading-spinner';
+import { ErrorMessage } from '@/components/error-message.component';
+import { LoadingSpinner } from '@/components/loading-spinner.component';
 import { useCoinById } from '@/services/api';
 
 interface CoinInfoProps {

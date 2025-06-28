@@ -2,7 +2,7 @@ import { Providers } from '@/components/implementations/providers';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
-import { Header } from '../components/implementations/header';
+import { HeaderImplementation } from '../components/implementations/header';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${poppins.variable} antialiased min-h-screen bg-background text-foreground`}
       >
         <Providers>
-          <Header />
+          <HeaderImplementation />
           {children}
         </Providers>
       </body>
