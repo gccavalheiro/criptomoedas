@@ -15,7 +15,7 @@ Aplicação para acompanhar criptomoedas em tempo real, construída com Next.js 
 
 1. Clone o repositório:
 ```bash
-git clone <repository-url>
+git clone https://github.com/gccavalheiro/criptomoedas.git
 cd criptomoedas
 ```
 
